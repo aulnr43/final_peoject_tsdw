@@ -1,0 +1,9 @@
+issue_id,category,variable,evidence,error_vs_valid,proposed_treatment,final_decision
+DQ-01,Missing Values,company,"112,593 baris kosong (94.31%)",Kosong karena mayoritas bukan reservasi korporasi,Bandingkan drop kolom vs label 'No Company' di Task C1,Evaluasi di Task C1
+DQ-02,Missing Values,agent,"16,340 baris kosong (13.69%)",Kosong saat pemesanan tidak melalui agen perjalanan,Imputasi kategori 'No Agent' atau indikator saluran,Evaluasi di Task C1
+DQ-03,Missing Values,"country, children",country kosong 488 baris; children kosong 4 baris,Data hilang sebagian kecil (<= 0.41%),Imputasi modus/Unknown untuk country; 0/median untuk children,Evaluasi di Task C1
+DQ-04,Duplicates,all_columns,"31,994 baris duplikat persis (26.80%)",Perlu dibedakan antara duplikat input dan reservasi berulang sah,Uji penghapusan duplikat & analisis sensitivitas di Task C2/C5,Evaluasi di Task C2 & C5
+DQ-05,Invalid Values,adr,"1 baris adr < 0 (min=-6.38) dan 1,959 baris adr == 0",adr < 0 tidak valid; adr == 0 perlu dicek (promosi/komplementer),Tangani adr < 0 dan analisis terpisah adr == 0 di Task C2,Evaluasi di Task C2
+DQ-06,Invalid / Consistency,"adults, children, babies, stays_*",180 baris tamu = 0; 715 baris malam menginap = 0,Tidak wajar untuk reservasi menginap aktif/pendapatan,Terapkan aturan validitas di Task C2 & Task D,Evaluasi di Task C2 & D
+DQ-07,Data Types & Categories,"reservation_status_date, meal, market_segment",reservation_status_date bertipe object; ada label 'Undefined' pada beberapa kolom kategori,Perlu konversi tipe tanggal & standarisasi kategori,Konversi ke datetime dan seragamkan label di Task C2/C3,Evaluasi di Task C2/C3
+DQ-08,Outliers,"lead_time, adr, stays_*","Outlier IQR terdeteksi (adr max=5400.0, lead_time max=737)","Sebagian valid secara bisnis, sebagian ekstrem perlu dicek",Gunakan transformasi/winsorizing & cek sensitivitas di Task C3/C5,Evaluasi di Task C3/C5
