@@ -1,0 +1,5 @@
+indikator,nilai_persen,rumus,keterangan
+Completeness,96.61,1 - (sel kosong / total sel),"Terdapat 129,425 sel kosong dari 3,820,480 sel (tertinggi di company 94,31% dan agent 13,69%)."
+Uniqueness,73.2,1 - (duplikat persis / total baris),"Terdapat 31,994 baris duplikat persis dari 119,390 baris (perlu dicek apakah duplikat input atau reservasi berulang)."
+Validity,99.31,1 - (baris melanggar aturan domain / total baris),"Terdapat 826 baris tidak valid (gabungan tamu=0, adr<0, atau total malam=0)."
+Consistency,100.0,1 - (baris inkonsisten status vs is_canceled / total baris),Terdapat 0 baris tidak konsisten antara reservation_status dan is_canceled.
