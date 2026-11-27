@@ -1,0 +1,33 @@
+variable_name,pandas_dtype,variable_type,missing_count,missing_pct,unique_count,description,expected_values
+hotel,object,Kategorikal,0,0.0,2,Jenis hotel: Resort Hotel (H1) atau City Hotel (H2),"{'Resort Hotel', 'City Hotel'}"
+is_canceled,int64,Biner / Integer,0,0.0,2,"Status pembatalan reservasi (1 = dibatalkan, 0 = tidak dibatalkan)","{0, 1}"
+lead_time,int64,Integer,0,0.0,479,Jumlah hari antara tanggal pemesanan masuk PMS dan tanggal kedatangan,>= 0
+arrival_date_year,int64,Integer,0,0.0,3,Tahun tanggal kedatangan tamu,"{2015, 2016, 2017}"
+arrival_date_month,object,Kategorikal,0,0.0,12,Bulan tanggal kedatangan tamu,January - December
+arrival_date_week_number,int64,Integer,0,0.0,53,Nomor minggu dalam tahun pada tanggal kedatangan,1 - 53
+arrival_date_day_of_month,int64,Integer,0,0.0,31,Tanggal dalam bulan pada tanggal kedatangan,1 - 31
+stays_in_weekend_nights,int64,Integer,0,0.0,17,Jumlah malam akhir pekan (Sabtu/Minggu) tamu menginap atau dipesan,>= 0
+stays_in_week_nights,int64,Integer,0,0.0,35,Jumlah malam hari kerja (Senin-Jumat) tamu menginap atau dipesan,>= 0
+adults,int64,Integer,0,0.0,14,Jumlah tamu dewasa,>= 0
+children,float64,Float / Integer,4,0.0,5,Jumlah tamu anak-anak,>= 0
+babies,int64,Integer,0,0.0,5,Jumlah tamu bayi,>= 0
+meal,object,Kategorikal,0,0.0,5,"Paket makan yang dipesan (Undefined/SC, BB, HB, FB)","{'BB', 'FB', 'HB', 'SC', 'Undefined'}"
+country,object,Kategorikal,488,0.41,177,Kode negara asal tamu (ISO 3166-1 alpha-3),"Kode ISO 3 huruf (mis. PRT, GBR, FRA)"
+market_segment,object,Kategorikal,0,0.0,8,"Segmen pasar pemesanan (TA = Travel Agents, TO = Tour Operators)","Online TA, Offline TA/TO, Groups, Direct, Corporate, dll."
+distribution_channel,object,Kategorikal,0,0.0,5,Saluran distribusi pemesanan,"TA/TO, Direct, Corporate, GDS, Undefined"
+is_repeated_guest,int64,Biner / Integer,0,0.0,2,"Penanda tamu berulang (1 = ya, 0 = bukan)","{0, 1}"
+previous_cancellations,int64,Integer,0,0.0,15,Jumlah pemesanan sebelumnya yang dibatalkan oleh tamu ini,>= 0
+previous_bookings_not_canceled,int64,Integer,0,0.0,73,Jumlah pemesanan sebelumnya yang tidak dibatalkan oleh tamu ini,>= 0
+reserved_room_type,object,Kategorikal,0,0.0,10,Kode tipe kamar yang dipesan (dianonimkan),Kode huruf A - L
+assigned_room_type,object,Kategorikal,0,0.0,12,Kode tipe kamar yang diberikan saat operasional (dianonimkan),Kode huruf A - L
+booking_changes,int64,Integer,0,0.0,21,Jumlah perubahan/amandemen pemesanan sebelum check-in atau batal,>= 0
+deposit_type,object,Kategorikal,0,0.0,3,Jenis jaminan deposit pemesanan,"{'No Deposit', 'Non Refund', 'Refundable'}"
+agent,float64,Float / ID,16340,13.69,333,ID agen perjalanan pemesan (NaN jika tanpa agen),ID numerik atau NaN
+company,float64,Float / ID,112593,94.31,352,ID perusahaan pemesan/penanggung biaya (NaN jika bukan perusahaan),ID numerik atau NaN
+days_in_waiting_list,int64,Integer,0,0.0,128,Jumlah hari pemesanan di daftar tunggu sebelum dikonfirmasi,>= 0
+customer_type,object,Kategorikal,0,0.0,4,Tipe kontrak/kelompok pelanggan,"{'Contract', 'Group', 'Transient', 'Transient-Party'}"
+adr,float64,Float,0,0.0,8879,Average Daily Rate: rata-rata tarif kamar per malam menginap,>= 0
+required_car_parking_spaces,int64,Integer,0,0.0,5,Jumlah kebutuhan slot parkir mobil,>= 0
+total_of_special_requests,int64,Integer,0,0.0,6,Jumlah permintaan khusus tamu,>= 0
+reservation_status,object,Kategorikal,0,0.0,3,Status akhir reservasi,"{'Canceled', 'Check-Out', 'No-Show'}"
+reservation_status_date,object,Tanggal / String,0,0.0,926,Tanggal ditetapkannya status terakhir reservasi,Format YYYY-MM-DD
